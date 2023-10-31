@@ -1,6 +1,9 @@
 from flask import Flask
 from flask_restful import Api, Resource
 from flask_cors import CORS
+from dotenv import dotenv_values
+
+config=dotenv_values(".env")
 
 app = Flask(__name__)
 CORS(app)
@@ -43,4 +46,4 @@ IMPRESSION:
 api.add_resource(Template, "/get-report-template")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=config["PORT"], debug=True)
