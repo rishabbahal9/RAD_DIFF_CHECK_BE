@@ -46,4 +46,4 @@ IMPRESSION:
 api.add_resource(Template, "/get-report-template")
 
 if __name__ == "__main__":
-    app.run(port=config["PORT"], debug=True)
+    app.run(port=config["PORT"], debug= True if config["DEBUG"]=="True" else False)
