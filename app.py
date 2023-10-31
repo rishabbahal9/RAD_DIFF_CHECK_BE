@@ -11,7 +11,8 @@ api=Api(app)
 
 
 class Template(Resource):
-    def get(self):
+    def get(self, template_id):
+        print("Template ID" + str(template_id))
         return {"content": """EXAM:
 CT [_laterality_] [Generic Bone], [without or with] IV contrast
 
@@ -43,7 +44,7 @@ IMPRESSION:
 1. No acute osseous abnormality.
 """}
 
-api.add_resource(Template, "/get-report-template")
+api.add_resource(Template, "/get-report-template/<template_id>")
 
 if __name__ == "__main__":
     app.run(port=config["PORT"], debug= True if config["DEBUG"]=="True" else False)
