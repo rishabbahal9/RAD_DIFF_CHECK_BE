@@ -1,4 +1,4 @@
-#  RADPAIR ASSIGNMENT BACKEND
+#  RAD DIFF CHECK BACKEND
 ### Github links
 Backend code: https://github.com/rishabbahal9/RADPAIR_ASSIGNMENT_BE
 
